@@ -1,4 +1,4 @@
-import Header from '../../components/Header'
+
 import HackathonList from './HackathonList'
 import Landing from './Landing'
 import ParticipationBenefits from './ParticipationBenefits'

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { ChallengeStatusT, formatChallengeDate } from '../utils/date';
 import TimerTicker from './TimerTicker';
 import CircleTickIcon from '../assets/icons/charm_circle-tick.svg?react'

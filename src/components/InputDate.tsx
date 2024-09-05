@@ -9,7 +9,7 @@ const InputDate = (props: React.DetailedHTMLProps<React.InputHTMLAttributes<HTML
       setPlaceholderVisible(false);
     };
   
-    const handleBlur = (event) => {
+    const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
       if (!event.target.value) {
         setPlaceholderVisible(true);
       }

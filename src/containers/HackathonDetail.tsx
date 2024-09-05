@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import  { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useChallengeContext } from "../context/challenge";
 import { formatChallengeDate, formatDateString } from "../utils/date";
@@ -26,12 +26,23 @@ const HackathonDetail = () => {
     .find((part) => part.type === "timeZoneName")?.value;
 
   
-  const handleEdit = () => navigate(`/challenges/${id}/edit`);
-  const handleDelete = () => {
-    deleteChallenge(id);
-    navigate("/");
-  }
-
+    const handleEdit = () => {
+      if (id) {
+        navigate(`/challenges/${id}/edit`);
+      } else {
+        console.error("ID is undefined");
+      }
+    };
+    
+    const handleDelete = () => {
+      if (id) {
+        deleteChallenge(id);
+        navigate("/");
+      } else {
+        console.error("ID is undefined");
+      }
+    };
+    
   return (
     <div className="h-[calc(100%-64px)] overflow-auto">
       <div className="p-6 lg:px-[127px] lg:py-[96px] bg-[#003145] text-white">

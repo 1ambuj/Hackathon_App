@@ -8,7 +8,7 @@ const Select = ({ children, ...props }: React.SelectHTMLAttributes<HTMLSelectEle
             {children}
         </select>
         <img src={SelectArrowIcon} className="absolute top-1/2 -translate-y-1/2 right-[22px]" />
-        {/* <SelectArrowIcon  /> */}
+      
     </div>
   )
 }
