@@ -6,7 +6,7 @@ import ParticipationBenefits from './ParticipationBenefits'
 const Home = () => {
   return (
     <div className="h-[calc(100%-64px)]">
-        <div className="w-full h-full">
+        <div className="w-full">
             <Landing />
         </div>
         <ParticipationBenefits />

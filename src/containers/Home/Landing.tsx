@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Landing = () => {
   return (
-    <div className="h-full flex flex-col justify-between text-white bg-[#003145]">
+    <div className="flex flex-col justify-between text-white bg-[#003145]">
         <div className="pt-[126px] flex gap-[95px] justify-center px-4">
             <div className="w-[705px]">
                 <div className="text-5xl font-semibold border-l-[10px] border-[#FFCE5C] pl-[52px]">
