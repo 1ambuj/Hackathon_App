@@ -35,9 +35,11 @@ const benefits = [
 const ParticipationBenefits = () => {
   return (
     <div className="pt-[90px] pb-[123px]">
-        <p className="text-center text-[32px] leading-5 font-semibold">Why Participate in&nbsp; 
+        <p className="text-center text-[24px] sm:text-[32px] leading-6 sm:leading-8 font-semibold">
+            Why Participate in&nbsp; 
             <span className="text-[#0FA958]">AI Challenges?</span>
         </p>
+
         <div className="flex justify-center flex-wrap gap-x-8 gap-y-10 mt-[72px]">
             {benefits.map(benefit => (
                 <BenefitCard key={benefit.id} {...benefit} />

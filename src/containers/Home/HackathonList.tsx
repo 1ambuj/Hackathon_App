@@ -31,6 +31,7 @@ const HackathonList = () => {
   const [search, setSearch] = React.useState('');
 
   const { challenges } = useChallengeContext();
+  console.log("filter",selectedFilters)
 
   const handleRemoveFilter = (id: string) => {
     setSelectedFilters((prev) => prev.filter((f) => f.id !== id));
@@ -65,13 +66,13 @@ const HackathonList = () => {
 
   return (
     <div>
-        <div className="w-full bg-[#002A3B] pt-[72px] pb-[98px]">
+        <div className="w-full bg-[#002A3B] pt-[72px] pb-[98px] px-4">
             <p className="font-semibold text-[28px] text-white text-center">Explore Challenges</p>
-            <div className="w-[67%] flex max-w-[964px] mx-auto mt-16 gap-6">
+            <div className="w-full sm:w-[67%] flex max-w-[964px] mx-auto mt-7 sm:mt-14 gap-3 sm:gap-6 flex-col sm:flex-row">
                 <SearchInput placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} />
                 <FilterComponent filter={options} selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters} />
             </div>
-            <div className="w-[67%] max-w-[964px] mx-auto mt-10 flex flex-wrap items-center gap-[30px]">
+            <div className="w-[80%] sm:w-[67%] max-w-[964px] mx-auto mt-6 sm:mt-10 flex flex-wrap items-center gap-[30px]">
                 {selectedFilters.map((filter) => <Tag key={filter.id} title={filter.label} onRemove={() => handleRemoveFilter(filter.id)} />)}
             </div>  
         </div>

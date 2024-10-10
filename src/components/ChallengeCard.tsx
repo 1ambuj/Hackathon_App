@@ -26,7 +26,6 @@ const statusMetaData = {
 
 const ChallengeCard = ({ challenge }: ChallengeCardPropsT) => {
   const [challengeStatus, setChallengeStatus] = useState<ChallengeStatusT>(formatChallengeDate(challenge.startDate, challenge.endDate));
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -40,7 +39,6 @@ const ChallengeCard = ({ challenge }: ChallengeCardPropsT) => {
   const openChallenge = () => {
     navigate(`/challenges/${challenge.id}`);
   }
-
   return (
     <div className="w-full max-w-[354px] rounded-2xl overflow-hidden">
         <img src={challenge.img} alt={challenge.name} className="w-full h-[174px] object-cover"/>
@@ -54,7 +52,7 @@ const ChallengeCard = ({ challenge }: ChallengeCardPropsT) => {
                 ) : (
                     <div className="flex">
                         <TimerTicker title="Days" time={challengeStatus.timeIn!.days} />
-                        <span className="mx-1">:</span>
+                        <span className="mx-1">:</span> 
                         <TimerTicker title="Hours"align="items-center" time={challengeStatus.timeIn!.hours} />
                         <span className="mx-1">:</span>
                         <TimerTicker title="Mins" time={challengeStatus.timeIn!.minutes} />

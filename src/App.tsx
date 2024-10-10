@@ -1,10 +1,10 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./containers/Home"
-import AddEditHackathon from "./containers/AddEditHackathon"
 import HackathonDetail from "./containers/HackathonDetail"
 import Header from "./components/Header"
 import ChallengeContextProvider from "./context/challenge"
+import AddEditHackathon from "./containers/AddEditHackathon"
 
 function App() {
 

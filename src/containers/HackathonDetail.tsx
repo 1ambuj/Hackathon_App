@@ -8,9 +8,8 @@ import SkillLevelIcon from "../assets/icons/carbon_skill-level-basic.svg?react";
 const HackathonDetail = () => {
   const { id } = useParams();
   const { challenges, deleteChallenge } = useChallengeContext();
-
-  const navigate = useNavigate();
-
+  console.log(challenges)
+  const navigate = useNavigate();  
   const challenge = useMemo(() => challenges.find((c) => c.id === id), []);
 
   const challengeStatus = formatChallengeDate(

@@ -65,13 +65,13 @@ const FilterComponent = ({ filter, selectedFilters, setSelectedFilters }: Filter
     <div className="relative">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className={`h-[50px] bg-white text-lg pl-6 pr-4 text-black border border-[#EAEAEA] flex items-center justify-between gap-5 rounded-[10px] ${isOpen ? 'w-[290px] rounded-b-none border-b-0' : ''}`}
+        className={`h-[50px] bg-white text-lg pl-6 pr-4 text-black border border-[#EAEAEA] flex items-center justify-between gap-5 rounded-[10px] ${isOpen ? ' w-full  custom:w-[290px] rounded-b-none border-b-0' : ''}`}
       >
         <span>Filter</span>
         <CaertIcon className={!isOpen ? 'rotate-180' : ''} />
       </button>
       {isOpen ? (
-        <div className="absolute top-[50px] right-0 w-[290px] bg-white pt-3.5 pb-2.5 px-3 max-h-[338px] overflow-y-auto rounded-b-[10px]">
+        <div className="absolute top-[50px]  w-full  custom:w-[290px]  bg-white pt-0 custom:pt-3.5  custom:pb-2.5 px-3 max-h-[338px] overflow-y-auto rounded-b-[10px]">
           {filter.map((group) => (
             <div
               key={group.id}
